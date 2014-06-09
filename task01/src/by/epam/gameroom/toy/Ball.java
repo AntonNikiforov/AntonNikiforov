@@ -12,12 +12,8 @@ public class Ball extends Toy {
 	public Ball() {}
 	
 	public Ball(Color color, int cost, float diametr, float pressure) {
-		
-		// size depends of diametr
-		super(diametr > 30.0f ? Size.LARGE :
-				diametr < 10.0f ? Size.SMALL : Size.MIDSIZE,
-				color, Material.RUBBER, cost);
-		//super(Size.MIDSIZE, color, Material.RUBBER, cost);
+
+		super(Size.MIDSIZE, color, Material.RUBBER, cost);
 		
 		if (diametr <= 0.0f || pressure < 0.0f) {
 			throw new IllegalArgumentException();
@@ -27,14 +23,11 @@ public class Ball extends Toy {
 	}
 	
 	public void setDiametr(float diametr) {
+		
 		if (diametr <= 0.0f) {
 			throw new IllegalArgumentException();
 		}
-		
 		this.diametr = diametr;
-		// size depends of diametr
-		setSize(diametr > 30.0f ? Size.LARGE :
-				diametr < 10.0f ? Size.SMALL : Size.MIDSIZE);
 	}
 	
 	public float getDiametr() {
