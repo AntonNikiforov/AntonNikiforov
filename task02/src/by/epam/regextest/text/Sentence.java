@@ -1,6 +1,6 @@
 package by.epam.regextest.text;
 
-public class Sentence extends Composite {
+public class Sentence extends Text {
 	
 	public enum SentenceType {
 		DECLERATIVE,

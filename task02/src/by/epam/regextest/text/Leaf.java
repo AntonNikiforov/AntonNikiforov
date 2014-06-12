@@ -5,6 +5,11 @@ abstract public class Leaf extends Component {
 	String text;
 	
 	public Leaf(String text) {
+		if (text == null) {
+			text = "";
+			throw new IllegalArgumentException();
+			// log
+		}
 		this.text = text;
 	}
 	

@@ -1,26 +1,24 @@
 package by.epam.regextest.task;
 
 import java.util.List;
+import java.util.LinkedList;
 import java.util.Collections;
 
 import by.epam.regextest.text.Text;
 import by.epam.regextest.text.Sentence;
 import by.epam.regextest.text.Word;
-import by.epam.regextest.text.TextHandler;
-import by.epam.regextest.parser.TextParser;
-import by.epam.regextest.comparator.*;
+import by.epam.regextest.comparator.SentenceComparator;
+import by.epam.regextest.comparator.WordComparator;
+import by.epam.regextest.comparator.WordComparatorByLetter;
 
 public class Main {
 	public static void main(String[] args) {
 		
 		String str = TextHandler.writeFileIntoString("task2text.txt");
 		
-		TextParser parser = new TextParser();
+		Text text = TextHandler.getTextFromString(str);
 		
-		Text text = parser.parse(str);
-		
-		System.out.println(text.getText());
-		System.out.println("\n---------------");
+		System.out.println("---------------");
 		
 		// 2. Вывести все предложения заданного текста в порядке возрастания
 		// количества слов в каждом из них.
@@ -30,7 +28,7 @@ public class Main {
 		for (Sentence s : sList) {
 			System.out.println(s.getText());
 		}
-		System.out.println("\n---------------");
+		System.out.println("---------------");
 		
 		// 6. Напечатать слова текста в алфавитном порядке по первой букве.
 		// Слова, начинающиеся с новой буквы, печатать с красной строки.
@@ -39,6 +37,7 @@ public class Main {
 		
 		Character c = 'a';
 		for (Word w : wList) {
+			if (w.isDigit()) continue;
 			Character first = Character.toLowerCase(w.getText().charAt(0));
 			if (c != first) {
 				System.out.println();
@@ -53,8 +52,12 @@ public class Main {
 		Collections.sort(wList, new WordComparatorByLetter('s'));
 		
 		for (Word w : wList) {
+			if (w.isDigit()) continue;
 			System.out.println(w.getText());
 		}
-		System.out.println("\n---------------");
+		System.out.println("---------------");
+		
+		System.out.println(text.getText());
+		System.out.println("---------------");
 	}
 }

@@ -1,6 +1,6 @@
 package by.epam.regextest.text;
 
-public class Word extends Composite {
+public class Word extends Text {
 	
 	private boolean decomposite;
 	private boolean digit;
