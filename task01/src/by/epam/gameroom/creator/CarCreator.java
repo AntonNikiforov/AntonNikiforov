@@ -13,10 +13,10 @@ public class CarCreator extends ToyCreator {
     public Toy factoryMethod() {
 		Random rand = new Random();
 		
-		Size size = Size.randomSize();
-		Color color = Color.randomColor();
+		Size size = randomEnumValue(Size.class);
+		Color color = randomEnumValue(Color.class);
 		int cost = rand.nextInt(90_000) + 10_000;
-		CarType type = CarType.randomCarType();
+		CarType type = randomEnumValue(CarType.class);
 		
 		return new Car(size, color, cost, type);
 	}

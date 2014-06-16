@@ -13,10 +13,10 @@ public class PlushToyCreator extends ToyCreator {
     public Toy factoryMethod() {
 		Random rand = new Random();
 		
-		Size size = Size.randomSize();
-		Color color = Color.randomColor();
+		Size size = randomEnumValue(Size.class);
+		Color color = randomEnumValue(Color.class);
 		int cost = rand.nextInt(90_000) + 10_000;
-		Animal animal = Animal.randomAnimal();
+		Animal animal = randomEnumValue(Animal.class);
 		boolean talking = rand.nextBoolean();
 		
 		return new PlushToy(size, color, cost, animal, talking);

@@ -1,285 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <toysroom>
-	<plushtoy>
-		<size>LARGE</size>
-		<color>VARICOLORED</color>
-		<material>FABRIC</material>
-		<cost>93689</cost>
-		<animal>OTHER</animal>
-		<talking>false</talking>
-	</plushtoy>
-	<plushtoy>
-		<size>SMALL</size>
-		<color>VARICOLORED</color>
-		<material>FABRIC</material>
-		<cost>38982</cost>
-		<animal>BEAR</animal>
-		<talking>false</talking>
-	</plushtoy>
-	<ball>
-		<size>MIDSIZE</size>
-		<color>BLUE</color>
-		<material>RUBBER</material>
-		<cost>36224</cost>
-		<diametr>32.57792</diametr>
-		<pressure>3.9491916</pressure>
-	</ball>
 	<car>
-		<size>MIDSIZE</size>
+		<size>LARGE</size>
 		<color>GREEN</color>
 		<material>PLASTIC</material>
-		<cost>91387</cost>
-		<cartype>OTHER</cartype>
-	</car>
-	<car>
-		<size>MIDSIZE</size>
-		<color>BLUE</color>
-		<material>PLASTIC</material>
-		<cost>99844</cost>
+		<cost>62531</cost>
 		<cartype>PASSANGER</cartype>
 	</car>
-	<car>
-		<size>SMALL</size>
-		<color>RED</color>
-		<material>PLASTIC</material>
-		<cost>70763</cost>
-		<cartype>LIMOUSINE</cartype>
-	</car>
-	<plushtoy>
-		<size>MIDSIZE</size>
-		<color>BLACK</color>
-		<material>FABRIC</material>
-		<cost>13138</cost>
-		<animal>OTHER</animal>
-		<talking>true</talking>
-	</plushtoy>
 	<plushtoy>
 		<size>MIDSIZE</size>
 		<color>GREY</color>
 		<material>FABRIC</material>
-		<cost>65537</cost>
+		<cost>58049</cost>
 		<animal>BEAR</animal>
-		<talking>true</talking>
-	</plushtoy>
-	<plushtoy>
-		<size>LARGE</size>
-		<color>GREEN</color>
-		<material>FABRIC</material>
-		<cost>25039</cost>
-		<animal>COW</animal>
-		<talking>true</talking>
-	</plushtoy>
-	<plushtoy>
-		<size>LARGE</size>
-		<color>BLACK</color>
-		<material>FABRIC</material>
-		<cost>69396</cost>
-		<animal>HORSE</animal>
-		<talking>true</talking>
-	</plushtoy>
-	<car>
-		<size>MIDSIZE</size>
-		<color>WHITE</color>
-		<material>PLASTIC</material>
-		<cost>28113</cost>
-		<cartype>BUS</cartype>
-	</car>
-	<plushtoy>
-		<size>LARGE</size>
-		<color>WHITE</color>
-		<material>FABRIC</material>
-		<cost>65668</cost>
-		<animal>HORSE</animal>
 		<talking>false</talking>
 	</plushtoy>
 	<plushtoy>
-		<size>SMALL</size>
-		<color>GREEN</color>
+		<size>MIDSIZE</size>
+		<color>RED</color>
 		<material>FABRIC</material>
-		<cost>17631</cost>
+		<cost>15606</cost>
 		<animal>FOX</animal>
 		<talking>true</talking>
 	</plushtoy>
-	<ball>
-		<size>MIDSIZE</size>
-		<color>WHITE</color>
-		<material>RUBBER</material>
-		<cost>36809</cost>
-		<diametr>36.029816</diametr>
-		<pressure>10.370005</pressure>
-	</ball>
-	<car>
-		<size>LARGE</size>
-		<color>GREY</color>
-		<material>PLASTIC</material>
-		<cost>23642</cost>
-		<cartype>PASSANGER</cartype>
-	</car>
+	<plushtoy>
+		<size>SMALL</size>
+		<color>GREEN</color>
+		<material>FABRIC</material>
+		<cost>88568</cost>
+		<animal>DOG</animal>
+		<talking>true</talking>
+	</plushtoy>
 	<car>
 		<size>SMALL</size>
-		<color>RED</color>
+		<color>WHITE</color>
 		<material>PLASTIC</material>
-		<cost>78014</cost>
+		<cost>70468</cost>
 		<cartype>LIMOUSINE</cartype>
 	</car>
 	<ball>
 		<size>MIDSIZE</size>
-		<color>BLUE</color>
+		<color>WHITE</color>
 		<material>RUBBER</material>
-		<cost>40195</cost>
-		<diametr>1.2830943</diametr>
-		<pressure>12.940904</pressure>
+		<cost>36172</cost>
+		<diametr>40.40002</diametr>
+		<pressure>15.286678</pressure>
+	</ball>
+	<plushtoy>
+		<size>SMALL</size>
+		<color>BLUE</color>
+		<material>FABRIC</material>
+		<cost>50973</cost>
+		<animal>HORSE</animal>
+		<talking>true</talking>
+	</plushtoy>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>GREY</color>
+		<material>RUBBER</material>
+		<cost>46740</cost>
+		<diametr>19.122965</diametr>
+		<pressure>16.122406</pressure>
 	</ball>
 	<car>
 		<size>LARGE</size>
-		<color>GREEN</color>
+		<color>WHITE</color>
 		<material>PLASTIC</material>
-		<cost>56243</cost>
-		<cartype>OTHER</cartype>
-	</car>
-	<car>
-		<size>LARGE</size>
-		<color>GREY</color>
-		<material>PLASTIC</material>
-		<cost>69865</cost>
+		<cost>99961</cost>
 		<cartype>SPORT</cartype>
 	</car>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>BLUE</color>
+		<material>RUBBER</material>
+		<cost>76790</cost>
+		<diametr>49.676575</diametr>
+		<pressure>10.780168</pressure>
+	</ball>
 	<plushtoy>
-		<size>SMALL</size>
-		<color>RED</color>
+		<size>MIDSIZE</size>
+		<color>GREEN</color>
 		<material>FABRIC</material>
-		<cost>22870</cost>
-		<animal>HORSE</animal>
+		<cost>23286</cost>
+		<animal>BEAR</animal>
 		<talking>false</talking>
 	</plushtoy>
 	<car>
+		<size>MIDSIZE</size>
+		<color>GREY</color>
+		<material>PLASTIC</material>
+		<cost>94456</cost>
+		<cartype>LIMOUSINE</cartype>
+	</car>
+	<car>
 		<size>LARGE</size>
 		<color>GREEN</color>
 		<material>PLASTIC</material>
-		<cost>76647</cost>
-		<cartype>SPORT</cartype>
+		<cost>22995</cost>
+		<cartype>LIMOUSINE</cartype>
 	</car>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>WHITE</color>
+		<material>RUBBER</material>
+		<cost>33887</cost>
+		<diametr>10.490447</diametr>
+		<pressure>6.3578296</pressure>
+	</ball>
 	<plushtoy>
-		<size>SMALL</size>
-		<color>GREY</color>
-		<material>FABRIC</material>
-		<cost>62198</cost>
-		<animal>DOG</animal>
-		<talking>false</talking>
-	</plushtoy>
-	<plushtoy>
-		<size>SMALL</size>
+		<size>MIDSIZE</size>
 		<color>BLUE</color>
 		<material>FABRIC</material>
-		<cost>53312</cost>
+		<cost>61414</cost>
+		<animal>COW</animal>
+		<talking>true</talking>
+	</plushtoy>
+	<car>
+		<size>SMALL</size>
+		<color>WHITE</color>
+		<material>PLASTIC</material>
+		<cost>41750</cost>
+		<cartype>LIMOUSINE</cartype>
+	</car>
+	<plushtoy>
+		<size>SMALL</size>
+		<color>GREEN</color>
+		<material>FABRIC</material>
+		<cost>22522</cost>
+		<animal>CAT</animal>
+		<talking>true</talking>
+	</plushtoy>
+	<plushtoy>
+		<size>MIDSIZE</size>
+		<color>WHITE</color>
+		<material>FABRIC</material>
+		<cost>66163</cost>
+		<animal>BEAR</animal>
+		<talking>true</talking>
+	</plushtoy>
+	<plushtoy>
+		<size>MIDSIZE</size>
+		<color>GREY</color>
+		<material>FABRIC</material>
+		<cost>38241</cost>
+		<animal>CAT</animal>
+		<talking>false</talking>
+	</plushtoy>
+	<car>
+		<size>LARGE</size>
+		<color>GREEN</color>
+		<material>PLASTIC</material>
+		<cost>95234</cost>
+		<cartype>LIMOUSINE</cartype>
+	</car>
+	<plushtoy>
+		<size>LARGE</size>
+		<color>GREEN</color>
+		<material>FABRIC</material>
+		<cost>67526</cost>
+		<animal>BEAR</animal>
+		<talking>false</talking>
+	</plushtoy>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>BLACK</color>
+		<material>RUBBER</material>
+		<cost>43336</cost>
+		<diametr>14.172149</diametr>
+		<pressure>8.334766</pressure>
+	</ball>
+	<plushtoy>
+		<size>MIDSIZE</size>
+		<color>RED</color>
+		<material>FABRIC</material>
+		<cost>12077</cost>
+		<animal>OTHER</animal>
+		<talking>true</talking>
+	</plushtoy>
+	<car>
+		<size>LARGE</size>
+		<color>VARICOLORED</color>
+		<material>PLASTIC</material>
+		<cost>17444</cost>
+		<cartype>OTHER</cartype>
+	</car>
+	<plushtoy>
+		<size>MIDSIZE</size>
+		<color>RED</color>
+		<material>FABRIC</material>
+		<cost>30951</cost>
+		<animal>HORSE</animal>
+		<talking>true</talking>
+	</plushtoy>
+	<car>
+		<size>LARGE</size>
+		<color>RED</color>
+		<material>PLASTIC</material>
+		<cost>24332</cost>
+		<cartype>LIMOUSINE</cartype>
+	</car>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>GREEN</color>
+		<material>RUBBER</material>
+		<cost>78422</cost>
+		<diametr>47.528137</diametr>
+		<pressure>10.506506</pressure>
+	</ball>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>RED</color>
+		<material>RUBBER</material>
+		<cost>81563</cost>
+		<diametr>23.864662</diametr>
+		<pressure>15.877742</pressure>
+	</ball>
+	<plushtoy>
+		<size>MIDSIZE</size>
+		<color>WHITE</color>
+		<material>FABRIC</material>
+		<cost>16770</cost>
 		<animal>OTHER</animal>
 		<talking>false</talking>
 	</plushtoy>
 	<ball>
 		<size>MIDSIZE</size>
-		<color>GREY</color>
-		<material>RUBBER</material>
-		<cost>62702</cost>
-		<diametr>22.786516</diametr>
-		<pressure>1.4693093</pressure>
-	</ball>
-	<car>
-		<size>SMALL</size>
-		<color>RED</color>
-		<material>PLASTIC</material>
-		<cost>32361</cost>
-		<cartype>SPORT</cartype>
-	</car>
-	<car>
-		<size>SMALL</size>
-		<color>GREY</color>
-		<material>PLASTIC</material>
-		<cost>54151</cost>
-		<cartype>LIMOUSINE</cartype>
-	</car>
-	<ball>
-		<size>MIDSIZE</size>
-		<color>GREY</color>
-		<material>RUBBER</material>
-		<cost>93412</cost>
-		<diametr>23.873402</diametr>
-		<pressure>17.622131</pressure>
-	</ball>
-	<car>
-		<size>LARGE</size>
-		<color>BLACK</color>
-		<material>PLASTIC</material>
-		<cost>41098</cost>
-		<cartype>BUS</cartype>
-	</car>
-	<ball>
-		<size>MIDSIZE</size>
-		<color>RED</color>
-		<material>RUBBER</material>
-		<cost>28480</cost>
-		<diametr>13.313988</diametr>
-		<pressure>19.257715</pressure>
-	</ball>
-	<ball>
-		<size>MIDSIZE</size>
 		<color>GREEN</color>
 		<material>RUBBER</material>
-		<cost>39367</cost>
-		<diametr>26.039186</diametr>
-		<pressure>6.4741716</pressure>
+		<cost>58516</cost>
+		<diametr>46.678265</diametr>
+		<pressure>15.281867</pressure>
 	</ball>
-	<plushtoy>
-		<size>MIDSIZE</size>
-		<color>GREY</color>
-		<material>FABRIC</material>
-		<cost>95565</cost>
-		<animal>COW</animal>
-		<talking>true</talking>
-	</plushtoy>
-	<plushtoy>
-		<size>MIDSIZE</size>
-		<color>VARICOLORED</color>
-		<material>FABRIC</material>
-		<cost>50085</cost>
-		<animal>COW</animal>
-		<talking>true</talking>
-	</plushtoy>
-	<car>
-		<size>LARGE</size>
-		<color>BLACK</color>
-		<material>PLASTIC</material>
-		<cost>48263</cost>
-		<cartype>SPORT</cartype>
-	</car>
 	<ball>
 		<size>MIDSIZE</size>
-		<color>GREEN</color>
+		<color>BLACK</color>
 		<material>RUBBER</material>
-		<cost>33075</cost>
-		<diametr>49.896194</diametr>
-		<pressure>5.1874866</pressure>
+		<cost>96530</cost>
+		<diametr>36.6335</diametr>
+		<pressure>5.444684</pressure>
 	</ball>
-	<car>
-		<size>MIDSIZE</size>
-		<color>VARICOLORED</color>
-		<material>PLASTIC</material>
-		<cost>60527</cost>
-		<cartype>OTHER</cartype>
-	</car>
 	<plushtoy>
-		<size>MIDSIZE</size>
-		<color>GREY</color>
+		<size>LARGE</size>
+		<color>WHITE</color>
 		<material>FABRIC</material>
-		<cost>57960</cost>
-		<animal>CAT</animal>
+		<cost>88311</cost>
+		<animal>BEAR</animal>
 		<talking>false</talking>
 	</plushtoy>
 	<ball>
 		<size>MIDSIZE</size>
 		<color>WHITE</color>
 		<material>RUBBER</material>
-		<cost>54140</cost>
-		<diametr>38.474415</diametr>
-		<pressure>9.490343</pressure>
+		<cost>31876</cost>
+		<diametr>13.836244</diametr>
+		<pressure>10.752343</pressure>
 	</ball>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>BLACK</color>
+		<material>RUBBER</material>
+		<cost>79116</cost>
+		<diametr>44.635338</diametr>
+		<pressure>18.880972</pressure>
+	</ball>
+	<car>
+		<size>SMALL</size>
+		<color>VARICOLORED</color>
+		<material>PLASTIC</material>
+		<cost>10929</cost>
+		<cartype>PASSANGER</cartype>
+	</car>
+	<ball>
+		<size>MIDSIZE</size>
+		<color>WHITE</color>
+		<material>RUBBER</material>
+		<cost>61939</cost>
+		<diametr>23.569149</diametr>
+		<pressure>17.093763</pressure>
+	</ball>
+	<plushtoy>
+		<size>SMALL</size>
+		<color>BLACK</color>
+		<material>FABRIC</material>
+		<cost>49752</cost>
+		<animal>CAT</animal>
+		<talking>false</talking>
+	</plushtoy>
+	<plushtoy>
+		<size>MIDSIZE</size>
+		<color>BLACK</color>
+		<material>FABRIC</material>
+		<cost>31829</cost>
+		<animal>COW</animal>
+		<talking>true</talking>
+	</plushtoy>
 </toysroom>

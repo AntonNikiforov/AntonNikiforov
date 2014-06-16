@@ -11,7 +11,7 @@ public class BallCreator extends ToyCreator {
     public Toy factoryMethod() {
 		Random rand = new Random();
 		
-		Color color = Color.randomColor();
+		Color color = randomEnumValue(Color.class);
 		int cost = rand.nextInt(90_000) + 10_000;
 		float diametr = rand.nextFloat() * 50;
 		float pressure = rand.nextFloat() * 20;
