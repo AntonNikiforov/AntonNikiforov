@@ -1,5 +1,7 @@
-task01: ООП<br />
+task01: OOP<br />
 	14. игровая комната<br />
-task02: регулярные выражения<br />
-task03: xml & xsd<br />
+task02: RerExp<br />
+task03: Threads<br />
+	05. автобусные отсановки
+task04: XML & XSD<br />
 	14. старые открытки<br />
