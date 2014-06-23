@@ -1,0 +1,228 @@
+02:07:34,975 INFO  [Bus] Bus #1: 0 arrived Stop #1 [Bus #1: 0]: 50
+02:07:34,985 INFO  [Bus] Bus #2: 0 arrived Stop #1 [Bus #1: 0, Bus #2: 0]: 50
+02:07:35,000 INFO  [Bus] Bus #1: 0	=>	Stop #1 [Bus #1: 0, Bus #2: 0]: 50
+02:07:35,034 INFO  [Bus] Bus #1: 4	<=	Stop #1 [Bus #1: 4, Bus #2: 0]: 46
+02:07:35,035 INFO  [Bus] Bus #3: 0 arrived Stop #1 [Bus #2: 0, Bus #3: 0]: 46
+02:07:35,035 INFO  [Bus] Bus #3: 0	=>	Stop #1 [Bus #2: 0, Bus #3: 0]: 46
+02:07:35,036 INFO  [Bus] Stop #1 [Bus #2: 0, Bus #3: 0]: 46: Bus #3: 0	=>	Bus #2: 0
+02:07:35,037 INFO  [Bus] Bus #3: 7	<=	Stop #1 [Bus #2: 0, Bus #3: 7]: 39
+02:07:35,038 INFO  [Bus] Bus #1: 4 left Stop #1 [Bus #2: 0]: 39
+02:07:35,039 INFO  [Bus] Bus #1: 4 arrived Stop #2 [Bus #1: 4]: 50
+02:07:35,038 INFO  [Bus] Bus #2: 0	=>	Stop #1 [Bus #2: 0, Bus #4: 0]: 39
+02:07:35,038 INFO  [Bus] Bus #3: 7 left Stop #1 [Bus #2: 0, Bus #4: 0]: 39
+02:07:35,038 INFO  [Bus] Bus #4: 0 arrived Stop #1 [Bus #2: 0, Bus #4: 0]: 39
+02:07:35,071 INFO  [Bus] Bus #4: 0	=>	Stop #1 [Bus #2: 0, Bus #4: 0]: 39
+02:07:35,072 INFO  [Bus] Stop #1 [Bus #2: 0, Bus #4: 0]: 39: Bus #4: 0	=>	Bus #2: 0
+02:07:35,073 INFO  [Bus] Bus #4: 26	<=	Stop #1 [Bus #2: 0, Bus #4: 26]: 13
+02:07:35,073 INFO  [Bus] Bus #3: 7 arrived Stop #2 [Bus #1: 4, Bus #3: 7]: 50
+02:07:35,124 INFO  [Bus] Bus #3: 0	=>	Stop #2 [Bus #1: 4, Bus #3: 0]: 57
+02:07:35,077 INFO  [Bus] Bus #2: 1	<=	Stop #1 [Bus #2: 1, Bus #4: 26]: 12
+02:07:35,125 INFO  [Bus] Bus #2: 1 left Stop #1 [Bus #4: 26]: 12
+02:07:35,077 INFO  [Bus] Bus #1: 4	=>	Stop #2 [Bus #1: 4, Bus #3: 7]: 50
+02:07:35,127 INFO  [Bus] Bus #1: 28	<=	Stop #2 [Bus #1: 28, Bus #3: 0]: 33
+02:07:35,127 INFO  [Bus] Bus #1: 28 left Stop #2 [Bus #3: 0]: 33
+02:07:35,128 INFO  [Bus] Bus #1: 28 arrived Stop #3 [Bus #1: 28]: 50
+02:07:35,128 INFO  [Bus] Bus #1: 3	=>	Stop #3 [Bus #1: 3]: 75
+02:07:35,129 INFO  [Bus] Bus #3: 5	<=	Stop #2 [Bus #3: 5, Bus #2: 1]: 28
+02:07:35,129 INFO  [Bus] Bus #2: 1 arrived Stop #2 [Bus #3: 0, Bus #2: 1]: 33
+02:07:35,129 INFO  [Bus] Bus #5: 0 arrived Stop #1 [Bus #4: 26, Bus #5: 0]: 12
+02:07:35,131 INFO  [Bus] Bus #5: 0	=>	Stop #1 [Bus #4: 26, Bus #5: 0]: 12
+02:07:35,132 INFO  [Bus] Stop #1 [Bus #4: 26, Bus #5: 0]: 12: Bus #5: 0	=>	Bus #4: 26
+02:07:35,132 INFO  [Bus] Bus #5: 1	<=	Stop #1 [Bus #4: 26, Bus #5: 1]: 11
+02:07:35,135 INFO  [Bus] Bus #6: 0 arrived Stop #1 [Bus #4: 26, Bus #6: 0]: 11
+02:07:35,135 INFO  [Bus] Bus #6: 0	=>	Stop #1 [Bus #4: 26, Bus #6: 0]: 11
+02:07:35,136 INFO  [Bus] Stop #1 [Bus #4: 26, Bus #6: 0]: 11: Bus #6: 0	=>	Bus #4: 26
+02:07:35,137 INFO  [Bus] Bus #6: 0	<=	Stop #1 [Bus #4: 26, Bus #6: 0]: 11
+02:07:35,137 INFO  [Bus] Bus #7: 0 arrived Stop #1 [Bus #4: 26, Bus #7: 0]: 11
+02:07:35,138 INFO  [Bus] Bus #7: 0	=>	Stop #1 [Bus #4: 26, Bus #7: 0]: 11
+02:07:35,138 INFO  [Bus] Stop #1 [Bus #4: 26, Bus #7: 0]: 11: Bus #7: 0	=>	Bus #4: 26
+02:07:35,139 INFO  [Bus] Bus #7: 7	<=	Stop #1 [Bus #4: 26, Bus #7: 7]: 4
+02:07:35,139 INFO  [Bus] Bus #8: 0 arrived Stop #1 [Bus #4: 26, Bus #8: 0]: 4
+02:07:35,140 INFO  [Bus] Bus #8: 0	=>	Stop #1 [Bus #4: 26, Bus #8: 0]: 4
+02:07:35,142 INFO  [Bus] Stop #1 [Bus #4: 26, Bus #8: 0]: 4: Bus #8: 0	=>	Bus #4: 26
+02:07:35,142 INFO  [Bus] Bus #8: 0	<=	Stop #1 [Bus #4: 26, Bus #8: 0]: 4
+02:07:35,144 INFO  [Bus] Bus #9: 0 arrived Stop #1 [Bus #4: 26, Bus #9: 0]: 4
+02:07:35,144 INFO  [Bus] Bus #9: 0	=>	Stop #1 [Bus #4: 26, Bus #9: 0]: 4
+02:07:35,145 INFO  [Bus] Stop #1 [Bus #4: 26, Bus #9: 0]: 4: Bus #9: 0	=>	Bus #4: 26
+02:07:35,145 INFO  [Bus] Bus #9: 1	<=	Stop #1 [Bus #4: 26, Bus #9: 1]: 3
+02:07:35,146 INFO  [Bus] Bus #10: 0 arrived Stop #1 [Bus #4: 26, Bus #10: 0]: 3
+02:07:35,147 INFO  [Bus] Bus #10: 0	=>	Stop #1 [Bus #4: 26, Bus #10: 0]: 3
+02:07:35,148 INFO  [Bus] Stop #1 [Bus #4: 26, Bus #10: 0]: 3: Bus #10: 0	=>	Bus #4: 26
+02:07:35,148 INFO  [Bus] Bus #10: 0	<=	Stop #1 [Bus #4: 26, Bus #10: 0]: 3
+02:07:35,150 INFO  [Bus] Bus #10: 0 left Stop #1 [Bus #4: 26]: 3
+02:07:35,135 INFO  [Bus] Bus #2: 0	=>	Stop #2 [Bus #3: 5, Bus #2: 0]: 29
+02:07:35,152 INFO  [Bus] Stop #2 [Bus #3: 5, Bus #2: 0]: 29: Bus #2: 0	=>	Bus #3: 5
+02:07:35,152 INFO  [Bus] Bus #2: 0	<=	Stop #2 [Bus #3: 5, Bus #2: 0]: 29
+02:07:35,153 INFO  [Bus] Bus #8: 0 left Stop #1 [Bus #4: 26]: 3
+02:07:35,154 INFO  [Bus] Bus #8: 0 arrived Stop #2 [Bus #2: 0, Bus #8: 0]: 29
+02:07:35,149 INFO  [Bus] Bus #9: 1 left Stop #1 [Bus #4: 26, Bus #10: 0]: 3
+02:07:35,155 INFO  [Bus] Bus #10: 0 arrived Stop #2 [Bus #8: 0, Bus #10: 0]: 29
+02:07:35,159 INFO  [Bus] Bus #10: 0	=>	Stop #2 [Bus #8: 0, Bus #10: 0]: 29
+02:07:35,155 INFO  [Bus] Bus #2: 0 left Stop #2 [Bus #8: 0]: 29
+02:07:35,155 INFO  [Bus] Bus #4: 26 left Stop #1 []: 3
+02:07:35,155 INFO  [Bus] Bus #1: 8	<=	Stop #3 [Bus #1: 8]: 70
+02:07:35,170 INFO  [Bus] Bus #1: 8 left Stop #3 []: 70
+02:07:35,170 INFO  [Bus] Bus #1: 8 arrived Stop #4 [Bus #1: 8]: 50
+02:07:35,170 INFO  [Bus] Bus #1: 5	=>	Stop #4 [Bus #1: 5]: 53
+02:07:35,171 INFO  [Bus] Bus #1: 26	<=	Stop #4 [Bus #1: 26]: 32
+02:07:35,171 INFO  [Bus] Bus #1: 26 left Stop #4 []: 32
+02:07:35,155 INFO  [Bus] Bus #5: 1 left Stop #1 [Bus #4: 26]: 3
+02:07:35,153 INFO  [Bus] Bus #6: 0 left Stop #1 [Bus #4: 26]: 3
+02:07:35,153 INFO  [Bus] Bus #3: 5 left Stop #2 [Bus #2: 0]: 29
+02:07:35,173 INFO  [Bus] Bus #3: 5 arrived Stop #3 [Bus #3: 5]: 70
+02:07:35,173 INFO  [Bus] Bus #3: 1	=>	Stop #3 [Bus #3: 1]: 74
+02:07:35,173 INFO  [Bus] Bus #3: 7	<=	Stop #3 [Bus #3: 7]: 68
+02:07:35,173 INFO  [Bus] Bus #3: 7 left Stop #3 []: 68
+02:07:35,173 INFO  [Bus] Bus #3: 7 arrived Stop #4 [Bus #3: 7]: 32
+02:07:35,174 INFO  [Bus] Bus #3: 4	=>	Stop #4 [Bus #3: 4]: 35
+02:07:35,153 INFO  [Bus] Bus #7: 7 left Stop #1 [Bus #4: 26]: 3
+02:07:35,175 INFO  [Bus] Bus #3: 28	<=	Stop #4 [Bus #3: 28]: 11
+02:07:35,175 INFO  [Bus] Bus #3: 28 left Stop #4 []: 11
+02:07:35,176 INFO  [Bus] Bus #3: 28 arrived Stop #5 [Bus #3: 28]: 50
+02:07:35,176 INFO  [Bus] Bus #3: 12	=>	Stop #5 [Bus #3: 12]: 66
+02:07:35,161 INFO  [Bus] Bus #8: 0	=>	Stop #2 [Bus #8: 0, Bus #10: 0]: 29
+02:07:35,180 INFO  [Bus] Bus #8: 0	<=	Stop #2 [Bus #8: 0, Bus #10: 0]: 29
+02:07:35,176 INFO  [Bus] Stop #2 [Bus #8: 0, Bus #10: 0]: 29: Bus #10: 0	=>	Bus #8: 0
+02:07:35,176 INFO  [Bus] Bus #2: 0 arrived Stop #3 [Bus #2: 0]: 68
+02:07:35,176 INFO  [Bus] Bus #1: 26 arrived Stop #5 [Bus #3: 12, Bus #1: 26]: 66
+02:07:35,193 INFO  [Bus] Bus #1: 2	=>	Stop #5 [Bus #3: 20, Bus #1: 2]: 82
+02:07:35,194 INFO  [Bus] Stop #5 [Bus #3: 21, Bus #1: 1]: 82: Bus #1: 1	=>	Bus #3: 21
+02:07:35,194 INFO  [Bus] Bus #1: 16	<=	Stop #5 [Bus #3: 21, Bus #1: 16]: 67
+02:07:35,190 INFO  [Bus] Bus #8: 0 left Stop #2 [Bus #10: 0, Bus #9: 1]: 29
+02:07:35,199 INFO  [Bus] Bus #8: 0 arrived Stop #3 [Bus #2: 0, Bus #8: 0]: 68
+02:07:35,199 INFO  [Bus] Bus #8: 0	=>	Stop #3 [Bus #2: 0, Bus #8: 0]: 68
+02:07:35,200 INFO  [Bus] Stop #3 [Bus #2: 0, Bus #8: 0]: 68: Bus #8: 0	=>	Bus #2: 0
+02:07:35,190 INFO  [Bus] Bus #3: 20	<=	Stop #5 [Bus #3: 20, Bus #1: 26]: 58
+02:07:35,190 INFO  [Bus] Bus #9: 1 arrived Stop #2 [Bus #10: 0, Bus #9: 1]: 29
+02:07:35,200 INFO  [Bus] Bus #9: 0	=>	Stop #2 [Bus #10: 0, Bus #9: 0]: 30
+02:07:35,201 INFO  [Bus] Stop #2 [Bus #10: 0, Bus #9: 0]: 30: Bus #9: 0	=>	Bus #10: 0
+02:07:35,201 INFO  [Bus] Bus #9: 0	<=	Stop #2 [Bus #10: 0, Bus #9: 0]: 30
+02:07:35,202 INFO  [Bus] Bus #4: 26 arrived Stop #2 [Bus #10: 0, Bus #4: 26]: 30
+02:07:35,203 INFO  [Bus] Bus #4: 21	=>	Stop #2 [Bus #10: 0, Bus #4: 21]: 35
+02:07:35,203 INFO  [Bus] Stop #2 [Bus #10: 6, Bus #4: 15]: 35: Bus #4: 15	=>	Bus #10: 6
+02:07:35,203 INFO  [Bus] Bus #4: 28	<=	Stop #2 [Bus #10: 6, Bus #4: 28]: 22
+02:07:35,203 INFO  [Bus] Bus #5: 1 arrived Stop #2 [Bus #10: 6, Bus #5: 1]: 22
+02:07:35,204 INFO  [Bus] Bus #5: 1	=>	Stop #2 [Bus #10: 6, Bus #5: 1]: 22
+02:07:35,204 INFO  [Bus] Stop #2 [Bus #10: 6, Bus #5: 1]: 22: Bus #5: 1	=>	Bus #10: 6
+02:07:35,204 INFO  [Bus] Bus #5: 1	<=	Stop #2 [Bus #10: 6, Bus #5: 1]: 22
+02:07:35,204 INFO  [Bus] Bus #4: 28 left Stop #2 [Bus #10: 6]: 22
+02:07:35,205 INFO  [Bus] Bus #6: 0 arrived Stop #2 [Bus #10: 6, Bus #6: 0]: 22
+02:07:35,205 INFO  [Bus] Bus #6: 0	=>	Stop #2 [Bus #10: 6, Bus #6: 0]: 22
+02:07:35,205 INFO  [Bus] Stop #2 [Bus #10: 6, Bus #6: 0]: 22: Bus #6: 0	=>	Bus #10: 6
+02:07:35,206 INFO  [Bus] Bus #6: 1	<=	Stop #2 [Bus #10: 6, Bus #6: 1]: 21
+02:07:35,206 INFO  [Bus] Bus #7: 7 arrived Stop #2 [Bus #10: 6, Bus #7: 7]: 21
+02:07:35,207 INFO  [Bus] Bus #7: 3	=>	Stop #2 [Bus #10: 6, Bus #7: 3]: 25
+02:07:35,207 INFO  [Bus] Stop #2 [Bus #10: 6, Bus #7: 3]: 25: Bus #7: 3	=>	Bus #10: 6
+02:07:35,207 INFO  [Bus] Bus #7: 4	<=	Stop #2 [Bus #10: 6, Bus #7: 4]: 24
+02:07:35,207 INFO  [Bus] Bus #7: 4 left Stop #2 [Bus #10: 6]: 24
+02:07:35,208 INFO  [Bus] Bus #6: 1 left Stop #2 [Bus #10: 6]: 24
+02:07:35,208 INFO  [Bus] Bus #5: 1 left Stop #2 [Bus #10: 6]: 24
+02:07:35,208 INFO  [Bus] Bus #9: 0 left Stop #2 [Bus #10: 6]: 24
+02:07:35,209 INFO  [Bus] Bus #3: 21 left Stop #5 [Bus #1: 16]: 67
+02:07:35,194 INFO  [Bus] Bus #10: 0	<=	Stop #2 [Bus #10: 0, Bus #9: 1]: 29
+02:07:35,209 INFO  [Bus] Bus #10: 6 left Stop #2 []: 24
+02:07:35,193 INFO  [Bus] Bus #2: 0	=>	Stop #3 [Bus #2: 0]: 68
+02:07:35,210 INFO  [Bus] Bus #2: 1	<=	Stop #3 [Bus #2: 1, Bus #8: 0]: 67
+02:07:35,210 INFO  [Bus] Bus #2: 1 left Stop #3 [Bus #8: 0]: 67
+02:07:35,211 INFO  [Bus] Bus #2: 1 arrived Stop #4 [Bus #2: 1]: 11
+02:07:35,211 INFO  [Bus] Bus #2: 1	=>	Stop #4 [Bus #2: 1]: 11
+02:07:35,213 INFO  [Bus] Bus #2: 5	<=	Stop #4 [Bus #2: 5]: 7
+02:07:35,214 INFO  [Bus] Bus #2: 5 left Stop #4 []: 7
+02:07:35,215 INFO  [Bus] Bus #2: 5 arrived Stop #5 [Bus #2: 5]: 67
+02:07:35,212 INFO  [Bus] Bus #8: 11	<=	Stop #3 [Bus #8: 11, Bus #4: 28]: 56
+02:07:35,212 INFO  [Bus] Bus #4: 28 arrived Stop #3 [Bus #8: 0, Bus #4: 28]: 67
+02:07:35,224 INFO  [Bus] Bus #4: 19	=>	Stop #3 [Bus #8: 11, Bus #4: 19]: 65
+02:07:35,224 INFO  [Bus] Stop #3 [Bus #8: 12, Bus #4: 18]: 65: Bus #4: 18	=>	Bus #8: 12
+02:07:35,225 INFO  [Bus] Bus #4: 26	<=	Stop #3 [Bus #8: 12, Bus #4: 26]: 57
+02:07:35,225 INFO  [Bus] Bus #7: 4 arrived Stop #3 [Bus #8: 12, Bus #7: 4]: 57
+02:07:35,226 INFO  [Bus] Bus #7: 4	=>	Stop #3 [Bus #8: 12, Bus #7: 4]: 57
+02:07:35,226 INFO  [Bus] Stop #3 [Bus #8: 13, Bus #7: 3]: 57: Bus #7: 3	=>	Bus #8: 13
+02:07:35,226 INFO  [Bus] Bus #7: 21	<=	Stop #3 [Bus #8: 13, Bus #7: 21]: 39
+02:07:35,226 INFO  [Bus] Bus #6: 1 arrived Stop #3 [Bus #8: 13, Bus #6: 1]: 39
+02:07:35,227 INFO  [Bus] Bus #6: 1	=>	Stop #3 [Bus #8: 13, Bus #6: 1]: 39
+02:07:35,227 INFO  [Bus] Stop #3 [Bus #8: 14, Bus #6: 0]: 39: Bus #6: 0	=>	Bus #8: 14
+02:07:35,227 INFO  [Bus] Bus #6: 15	<=	Stop #3 [Bus #8: 14, Bus #6: 15]: 24
+02:07:35,228 INFO  [Bus] Bus #5: 1 arrived Stop #3 [Bus #8: 14, Bus #5: 1]: 24
+02:07:35,228 INFO  [Bus] Bus #5: 1	=>	Stop #3 [Bus #8: 14, Bus #5: 1]: 24
+02:07:35,228 INFO  [Bus] Stop #3 [Bus #8: 14, Bus #5: 1]: 24: Bus #5: 1	=>	Bus #8: 14
+02:07:35,228 INFO  [Bus] Bus #5: 2	<=	Stop #3 [Bus #8: 14, Bus #5: 2]: 23
+02:07:35,229 INFO  [Bus] Bus #5: 2 left Stop #3 [Bus #8: 14]: 23
+02:07:35,230 INFO  [Bus] Bus #5: 2 arrived Stop #4 [Bus #5: 2]: 7
+02:07:35,230 INFO  [Bus] Bus #5: 1	=>	Stop #4 [Bus #5: 1]: 8
+02:07:35,230 INFO  [Bus] Bus #5: 3	<=	Stop #4 [Bus #5: 3]: 6
+02:07:35,231 INFO  [Bus] Bus #5: 3 left Stop #4 []: 6
+02:07:35,231 INFO  [Bus] Bus #5: 3 arrived Stop #5 [Bus #2: 5, Bus #5: 3]: 67
+02:07:35,213 INFO  [Bus] Bus #1: 16 left Stop #5 []: 67
+02:07:35,231 INFO  [Bus] Bus #10: 6 arrived Stop #3 [Bus #9: 0, Bus #10: 6]: 23
+02:07:35,232 INFO  [Bus] Bus #10: 0	=>	Stop #3 [Bus #9: 0, Bus #10: 0]: 29
+02:07:35,232 INFO  [Bus] Stop #3 [Bus #9: 0, Bus #10: 0]: 29: Bus #10: 0	=>	Bus #9: 0
+02:07:35,232 INFO  [Bus] Bus #10: 0	<=	Stop #3 [Bus #9: 0, Bus #10: 0]: 29
+02:07:35,233 INFO  [Bus] Bus #10: 0 left Stop #3 [Bus #9: 0]: 29
+02:07:35,233 INFO  [Bus] Bus #10: 0 arrived Stop #4 [Bus #10: 0]: 6
+02:07:35,233 INFO  [Bus] Bus #10: 0	=>	Stop #4 [Bus #10: 0]: 6
+02:07:35,234 INFO  [Bus] Bus #10: 0	<=	Stop #4 [Bus #10: 0]: 6
+02:07:35,231 INFO  [Bus] Bus #8: 14 left Stop #3 [Bus #9: 0]: 23
+02:07:35,231 INFO  [Bus] Bus #4: 26 left Stop #3 [Bus #8: 14, Bus #9: 0]: 23
+02:07:35,240 INFO  [Bus] Bus #4: 26 arrived Stop #4 [Bus #10: 0, Bus #4: 26]: 6
+02:07:35,240 INFO  [Bus] Bus #4: 25	=>	Stop #4 [Bus #10: 0, Bus #4: 25]: 7
+02:07:35,240 INFO  [Bus] Stop #4 [Bus #10: 17, Bus #4: 8]: 7: Bus #4: 8	=>	Bus #10: 17
+02:07:35,230 INFO  [Bus] Bus #7: 21 left Stop #3 [Bus #8: 14, Bus #9: 0]: 23
+02:07:35,230 INFO  [Bus] Bus #9: 0 arrived Stop #3 [Bus #8: 14, Bus #9: 0]: 23
+02:07:35,241 INFO  [Bus] Bus #9: 0	=>	Stop #3 [Bus #9: 0]: 29
+02:07:35,242 INFO  [Bus] Bus #9: 0	<=	Stop #3 [Bus #9: 0]: 29
+02:07:35,242 INFO  [Bus] Bus #9: 0 left Stop #3 []: 29
+02:07:35,228 INFO  [Bus] Bus #6: 15 left Stop #3 [Bus #8: 14, Bus #5: 1]: 24
+02:07:35,242 INFO  [Bus] Bus #4: 9	<=	Stop #4 [Bus #10: 17, Bus #4: 9]: 6
+02:07:35,243 INFO  [Bus] Bus #4: 9 left Stop #4 [Bus #10: 17]: 6
+02:07:35,243 INFO  [Bus] Bus #8: 14 arrived Stop #4 [Bus #10: 17, Bus #8: 14]: 6
+02:07:35,243 INFO  [Bus] Bus #8: 14	=>	Stop #4 [Bus #10: 17, Bus #8: 14]: 6
+02:07:35,244 INFO  [Bus] Stop #4 [Bus #10: 24, Bus #8: 7]: 6: Bus #8: 7	=>	Bus #10: 24
+02:07:35,244 INFO  [Bus] Bus #8: 10	<=	Stop #4 [Bus #10: 24, Bus #8: 10]: 3
+02:07:35,234 INFO  [Bus] Bus #2: 3	=>	Stop #5 [Bus #2: 3, Bus #5: 2]: 70
+02:07:35,245 INFO  [Bus] Bus #2: 16	<=	Stop #5 [Bus #2: 16, Bus #5: 2]: 57
+02:07:35,245 INFO  [Bus] Bus #2: 16 left Stop #5 [Bus #5: 2]: 57
+02:07:35,234 INFO  [Bus] Bus #5: 2	=>	Stop #5 [Bus #2: 5, Bus #5: 2]: 68
+02:07:35,246 INFO  [Bus] Bus #5: 24	<=	Stop #5 [Bus #5: 24]: 35
+02:07:35,246 INFO  [Bus] Bus #5: 24 left Stop #5 []: 35
+02:07:35,247 INFO  [Bus] Bus #4: 9 arrived Stop #5 [Bus #4: 9]: 35
+02:07:35,247 INFO  [Bus] Bus #4: 2	=>	Stop #5 [Bus #4: 2]: 42
+02:07:35,248 INFO  [Bus] Bus #4: 21	<=	Stop #5 [Bus #4: 21]: 23
+02:07:35,250 INFO  [Bus] Bus #4: 21 left Stop #5 []: 23
+02:07:35,247 INFO  [Bus] Bus #8: 10 left Stop #4 [Bus #10: 24, Bus #7: 21]: 3
+02:07:35,247 INFO  [Bus] Bus #7: 21 arrived Stop #4 [Bus #10: 24, Bus #7: 21]: 3
+02:07:35,251 INFO  [Bus] Bus #7: 21	=>	Stop #4 [Bus #7: 21, Bus #9: 0]: 3
+02:07:35,251 INFO  [Bus] Bus #7: 21	<=	Stop #4 [Bus #7: 21, Bus #9: 0]: 3
+02:07:35,252 INFO  [Bus] Bus #7: 21 left Stop #4 [Bus #9: 0]: 3
+02:07:35,252 INFO  [Bus] Bus #7: 21 arrived Stop #5 [Bus #7: 21]: 23
+02:07:35,252 INFO  [Bus] Bus #7: 13	=>	Stop #5 [Bus #7: 13]: 31
+02:07:35,252 INFO  [Bus] Bus #6: 15 arrived Stop #4 [Bus #9: 0, Bus #6: 15]: 3
+02:07:35,253 INFO  [Bus] Bus #6: 12	=>	Stop #4 [Bus #9: 0, Bus #6: 12]: 6
+02:07:35,253 INFO  [Bus] Stop #4 [Bus #9: 12, Bus #6: 0]: 6: Bus #6: 0	=>	Bus #9: 12
+02:07:35,253 INFO  [Bus] Bus #6: 0	<=	Stop #4 [Bus #9: 12, Bus #6: 0]: 6
+02:07:35,253 INFO  [Bus] Bus #6: 0 left Stop #4 [Bus #9: 12]: 6
+02:07:35,254 INFO  [Bus] Bus #6: 0 arrived Stop #5 [Bus #7: 17, Bus #6: 0]: 27
+02:07:35,254 INFO  [Bus] Bus #6: 0	=>	Stop #5 [Bus #7: 17, Bus #6: 0]: 27
+02:07:35,254 INFO  [Bus] Stop #5 [Bus #7: 17, Bus #6: 0]: 27: Bus #6: 0	=>	Bus #7: 17
+02:07:35,255 INFO  [Bus] Bus #6: 0	<=	Stop #5 [Bus #7: 17, Bus #6: 0]: 27
+02:07:35,255 INFO  [Bus] Bus #6: 0 left Stop #5 [Bus #7: 17]: 27
+02:07:35,255 INFO  [Bus] Bus #7: 17	<=	Stop #5 [Bus #7: 17]: 27
+02:07:35,255 INFO  [Bus] Bus #7: 17 left Stop #5 []: 27
+02:07:35,248 INFO  [Bus] Bus #10: 24 left Stop #4 [Bus #7: 21, Bus #9: 0]: 3
+02:07:35,248 INFO  [Bus] Bus #9: 0 arrived Stop #4 [Bus #7: 21, Bus #9: 0]: 3
+02:07:35,256 INFO  [Bus] Bus #9: 9	=>	Stop #4 [Bus #9: 9]: 9
+02:07:35,257 INFO  [Bus] Bus #9: 9	<=	Stop #4 [Bus #9: 9]: 9
+02:07:35,257 INFO  [Bus] Bus #9: 9 left Stop #4 []: 9
+02:07:35,257 INFO  [Bus] Bus #9: 9 arrived Stop #5 [Bus #8: 10, Bus #9: 9]: 27
+02:07:35,257 INFO  [Bus] Bus #9: 1	=>	Stop #5 [Bus #8: 10, Bus #9: 1]: 35
+02:07:35,258 INFO  [Bus] Stop #5 [Bus #8: 10, Bus #9: 1]: 35: Bus #9: 1	=>	Bus #8: 10
+02:07:35,258 INFO  [Bus] Bus #9: 19	<=	Stop #5 [Bus #8: 10, Bus #9: 19]: 17
+02:07:35,258 INFO  [Bus] Bus #9: 19 left Stop #5 [Bus #8: 10]: 17
+02:07:35,256 INFO  [Bus] Bus #8: 10 arrived Stop #5 [Bus #8: 10]: 27
+02:07:35,259 INFO  [Bus] Bus #8: 7	=>	Stop #5 [Bus #8: 7, Bus #10: 24]: 20
+02:07:35,262 INFO  [Bus] Bus #8: 7	<=	Stop #5 [Bus #8: 7, Bus #10: 24]: 20
+02:07:35,259 INFO  [Bus] Bus #10: 24 arrived Stop #5 [Bus #8: 10, Bus #10: 24]: 17
+02:07:35,262 INFO  [Bus] Bus #10: 13	=>	Stop #5 [Bus #8: 7, Bus #10: 13]: 31
+02:07:35,263 INFO  [Bus] Stop #5 [Bus #8: 15, Bus #10: 5]: 31: Bus #10: 5	=>	Bus #8: 15
+02:07:35,263 INFO  [Bus] Bus #10: 5	<=	Stop #5 [Bus #8: 15, Bus #10: 5]: 31
+02:07:35,263 INFO  [Bus] Bus #10: 5 left Stop #5 [Bus #8: 15]: 31
+02:07:35,264 INFO  [Bus] Bus #8: 15 left Stop #5 []: 31
