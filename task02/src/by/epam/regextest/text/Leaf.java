@@ -13,7 +13,7 @@ abstract public class Leaf extends Component {
 		this.text = text;
 	}
 	
-	public String getText() {
+	public String constructTextOfTheParts() {
 		return text;
 	}
 	
@@ -34,7 +34,7 @@ abstract public class Leaf extends Component {
 		
 		Leaf leaf = (Leaf) obj;
 		
-		if (!text.equals(leaf.getText())) {
+		if (!text.equals(leaf.constructTextOfTheParts())) {
 			return false;
 		}
 		

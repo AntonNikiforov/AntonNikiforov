@@ -26,7 +26,7 @@ public class Main {
 		Collections.sort(sList, new SentenceComparator());
 		
 		for (Sentence s : sList) {
-			System.out.println(s.getText());
+			System.out.println(s.constructTextOfTheParts());
 		}
 		System.out.println("---------------");
 		
@@ -38,12 +38,12 @@ public class Main {
 		Character c = 'a';
 		for (Word w : wList) {
 			if (w.isDigit()) continue;
-			Character first = Character.toLowerCase(w.getText().charAt(0));
+			Character first = Character.toLowerCase(w.constructTextOfTheParts().charAt(0));
 			if (c != first) {
 				System.out.println();
 				c = first;
 			}
-			System.out.print(w.getText() + " ");
+			System.out.print(w.constructTextOfTheParts() + " ");
 		}
 		System.out.println("\n---------------");
 		
@@ -53,11 +53,11 @@ public class Main {
 		
 		for (Word w : wList) {
 			if (w.isDigit()) continue;
-			System.out.println(w.getText());
+			System.out.println(w.constructTextOfTheParts());
 		}
 		System.out.println("---------------");
 		
-		System.out.println(text.getText());
+		System.out.println(text.constructTextOfTheParts());
 		System.out.println("---------------");
 	}
 }

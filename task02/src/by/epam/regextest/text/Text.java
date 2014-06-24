@@ -15,11 +15,11 @@ public class Text extends Component {
 		return parts;
 	}
 	
-	public String getText() {
+	public String constructTextOfTheParts() {
 		StringBuilder text = new StringBuilder();
 		
 		for (Component part : parts) {
-			text.append(part.getText());
+			text.append(part.constructTextOfTheParts());
 		}
 		return text.toString();
 	}
@@ -64,7 +64,7 @@ public class Text extends Component {
 		
 		str.append(getClass().getName()).append(" [");
 		for (Component part : parts) {	
-			str.append(", ").append(part.getText());
+			str.append(", ").append(part.constructTextOfTheParts());
 		}
 		str.append("]");
 		

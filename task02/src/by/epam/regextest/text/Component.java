@@ -2,10 +2,10 @@ package by.epam.regextest.text;
 
 abstract public class Component implements Comparable<Component> {
 	
-	abstract public String getText();
+	abstract public String constructTextOfTheParts();
 	
 	@Override
 	public int compareTo(Component obj) {
-		return getText().compareTo(obj.getText());
+		return constructTextOfTheParts().compareTo(obj.constructTextOfTheParts());
 	}
 }
