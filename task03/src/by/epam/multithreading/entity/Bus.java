@@ -3,13 +3,13 @@ package by.epam.multithreading.entity;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.*;
 
 import java.util.List;
 import java.util.LinkedList;
 import java.util.Random;
 
-import org.apache.log4j.*; 
+import org.apache.log4j.Logger; 
+import org.apache.log4j.Level; 
 
 public class Bus implements Runnable {
 	
