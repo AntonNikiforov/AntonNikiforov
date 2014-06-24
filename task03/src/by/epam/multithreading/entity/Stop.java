@@ -19,7 +19,7 @@ public class Stop {
 	private BlockingQueue<Bus> currentBuses;
 	private AtomicInteger numOfPeople;
 	
-	Lock lock = new ReentrantLock();
+	private Lock lock = new ReentrantLock();
 	
 	public Stop(String name, int num) {
 		if (num < 0) {
@@ -31,6 +31,10 @@ public class Stop {
 		this.name = name;
 		currentBuses = new LinkedBlockingQueue<Bus>(MAX_NUM_OF_BUSES);
 		numOfPeople = new AtomicInteger(num);
+	}
+	
+	public String getName() {
+		return name;
 	}
 	
 	public int addPerson() {
@@ -52,6 +56,10 @@ public class Stop {
 	
 	public BlockingQueue<Bus> getCurrentBuses() {
 		return currentBuses;
+	}
+	
+	public Lock getLock() {
+		return lock;
 	}
 	
 	@Override

@@ -55,6 +55,7 @@ public class Bus implements Runnable {
 		return numOfPassengers.get() < MAX_PLACES;
 	}
 	
+	@Override
 	public void run() {
 		
 		Random rand = new Random();
@@ -151,6 +152,11 @@ public class Bus implements Runnable {
 		}
 	}
 	
+	public Lock getLock() {
+		return lock;
+	}
+	
+	@Override
 	public String toString() {
 		return "Bus #" + name + ": " + numOfPassengers;
 	}
