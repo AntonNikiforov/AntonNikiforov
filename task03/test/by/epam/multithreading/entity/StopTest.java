@@ -12,8 +12,8 @@ public class StopTest {
 	@Test
 	public void test() {
 		
-		//Stop stop = new Stop("1", 50);
+		//Stop stop = new Stop("1", 0);
 		
-		assertEquals("must be true", 50, 50);
+		assertEquals("must be true", 0, 0);
 	}
 }

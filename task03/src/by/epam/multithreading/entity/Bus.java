@@ -13,15 +13,15 @@ import org.apache.log4j.Level;
 
 public class Bus implements Runnable {
 	
-	public static Logger log = Logger.getLogger(Bus.class);
+	public static final Logger log = Logger.getLogger(Bus.class);
 	
-	public static int MAX_PLACES = 30;
+	public static final int MAX_PLACES = 30;
 	
 	private String name;
 	private List<Stop> route = new LinkedList<>();
 	private AtomicInteger numOfPassengers;
 	
-	final Lock lock = new ReentrantLock();
+	private final Lock lock = new ReentrantLock();
 	
 	public Bus(String name, List<Stop> list) {
 		this.name = name;
@@ -30,21 +30,31 @@ public class Bus implements Runnable {
 	}
 	
 	public int pickUpPassenger() throws Exception {
-		if (numOfPassengers.get() >= MAX_PLACES) {
-			String msg = "no free places at " + toString();
-			log.log(Level.ERROR, msg);
-			throw new Exception(msg);
+		lock.lock();
+		try {
+			if (numOfPassengers.get() >= MAX_PLACES) {
+				String msg = "no free places at " + toString();
+				log.log(Level.ERROR, msg);
+				throw new Exception(msg);
+			}
+			return numOfPassengers.incrementAndGet();
+		} finally {
+			lock.unlock();
 		}
-		return numOfPassengers.incrementAndGet();
 	}
 	
-	public int debarkPassenger() throws Exception {
-		if (numOfPassengers.get() <= 0) {
-			String msg = "no passengers in " + toString();
-			log.log(Level.ERROR, msg);
-			throw new Exception(msg);
+	public int dropOffPassenger() throws Exception {
+		lock.lock();
+		try {
+			if (numOfPassengers.get() <= 0) {
+				String msg = "no passengers in " + toString();
+				log.log(Level.ERROR, msg);
+				throw new Exception(msg);
+			}
+			return numOfPassengers.decrementAndGet();
+		} finally {
+			lock.unlock();
 		}
-		return numOfPassengers.decrementAndGet();
 	}
 	
 	public int getNumOfPassengers() {
@@ -52,7 +62,12 @@ public class Bus implements Runnable {
 	}
 	
 	public boolean hasPlaces() {
-		return numOfPassengers.get() < MAX_PLACES;
+		lock.lock();
+		try {
+			return numOfPassengers.get() < MAX_PLACES;
+		} finally {
+			lock.unlock();
+		}
 	}
 	
 	@Override
@@ -73,7 +88,7 @@ public class Bus implements Runnable {
 						break;
 					}
 					stop.addPerson();
-					debarkPassenger();
+					dropOffPassenger();
 				}
 				//System.out.println(toString() + "\t=>\t" + stop);
 				log.log(Level.INFO, toString() + "\t=>\t" + stop);
@@ -84,9 +99,10 @@ public class Bus implements Runnable {
 				// с текущего автобуса на первый
 				if (stop.getCurrentBuses().size() > 1) {
 					
-					Bus firstBus = stop.getCurrentBuses().iterator().next();
+					//Bus firstBus = stop.getCurrentBuses().iterator().next();
+					Bus firstBus = stop.getCurrentBuses().peek();
 					
-					if (firstBus != this) {
+					if (firstBus != null && firstBus != this) {
 						
 						number = rand.nextInt(getNumOfPassengers() + 1);
 						
@@ -96,7 +112,7 @@ public class Bus implements Runnable {
 								break;
 							}
 							firstBus.pickUpPassenger();
-							debarkPassenger();
+							dropOffPassenger();
 						}
 						//System.out.println(stop + ": " + toString() + "\t=>\t" + firstBus.toString());
 						log.log(Level.INFO, stop + ": " + toString() + "\t=>\t" + firstBus.toString());
@@ -126,34 +142,22 @@ public class Bus implements Runnable {
 		}
 	}
 	
-	public void comeToStop(Stop stop) throws InterruptedException {
-		lock.lock();
-		try {
-			stop.getCurrentBuses().put(this);
-			
-			String msg = toString() + " arrived " + stop;
-			log.log(Level.INFO, msg);
-			//System.out.println(msg);
-		} finally {
-			lock.unlock();
-		}
+	private void comeToStop(Stop stop) throws InterruptedException {
+		
+		stop.parkBus(this);
+		
+		String msg = toString() + " arrived " + stop;
+		log.log(Level.INFO, msg);
+		//System.out.println(msg);
 	}
 	
-	public void comeFromStop(Stop stop) {
-		lock.lock();
-		try {
-			stop.getCurrentBuses().remove(this);
-			
-			String msg = toString() + " left " + stop;
-			log.log(Level.INFO, msg);
-			//System.out.println(msg);
-		} finally {
-			lock.unlock();
-		}
-	}
-	
-	public Lock getLock() {
-		return lock;
+	private void comeFromStop(Stop stop) {
+
+		stop.unparkBus(this);
+		
+		String msg = toString() + " left " + stop;
+		log.log(Level.INFO, msg);
+		//System.out.println(msg);
 	}
 	
 	@Override

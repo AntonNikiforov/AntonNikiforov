@@ -11,15 +11,15 @@ import org.apache.log4j.Level;
 
 public class Stop {
 	
-	public static Logger log = Logger.getLogger(Stop.class);
+	public static final Logger log = Logger.getLogger(Stop.class);
 	
-	public static int MAX_NUM_OF_BUSES = 2;
+	public static final int MAX_NUM_OF_BUSES = 2;
 	
 	private String name;
 	private BlockingQueue<Bus> currentBuses;
 	private AtomicInteger numOfPeople;
 	
-	private Lock lock = new ReentrantLock();
+	private final Lock lock = new ReentrantLock();
 	
 	public Stop(String name, int num) {
 		if (num < 0) {
@@ -42,12 +42,17 @@ public class Stop {
 	}
 	
 	public int removePerson() throws Exception {
-		if (numOfPeople.get() <= 0) {
-			String msg = "no people at " + toString();
-			log.log(Level.ERROR, msg);
-			throw new Exception(msg);
+		lock.lock();
+		try {
+			if (numOfPeople.get() <= 0) {
+				String msg = "no people at " + toString();
+				log.log(Level.ERROR, msg);
+				throw new Exception(msg);
+			}
+			return numOfPeople.decrementAndGet();
+		} finally {
+			lock.unlock();
 		}
-		return numOfPeople.decrementAndGet();
 	}
 	
 	public int getNumOfPeople() {
@@ -58,8 +63,16 @@ public class Stop {
 		return currentBuses;
 	}
 	
-	public Lock getLock() {
-		return lock;
+	public void parkBus(Bus bus) throws InterruptedException {
+		currentBuses.put(bus);
+		String msg = toString() + ": " + bus + " arrived";
+		log.log(Level.INFO, msg);
+	}
+	
+	public void unparkBus(Bus bus) {
+		currentBuses.remove(bus);
+		String msg = toString() + ": " + bus + " left";
+		log.log(Level.INFO, msg);
 	}
 	
 	@Override
