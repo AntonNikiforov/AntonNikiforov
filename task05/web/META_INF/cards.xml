@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cards>
+    <oldCard>
+        <theme>ARCHITECTURE</theme>
+        <type>PROMOTIONAL</type>
+        <country>Country</country>
+        <year>1952</year>
+        <author>Author</author>
+        <valuable>THEMATIC</valuable>
+    </oldCard>
+    <oldCard>
+        <theme>RELIGION</theme>
+        <type>PROMOTIONAL</type>
+        <country>Country</country>
+        <year>1928</year>
+        <author>Author</author>
+        <valuable>TRADING</valuable>
+        <sent>true</sent>
+    </oldCard>
+    <oldCard>
+        <theme>NATURE</theme>
+        <type>REGULAR</type>
+        <country>Country</country>
+        <year>1922</year>
+        <valuable>THEMATIC</valuable>
+    </oldCard>
+</cards>
