@@ -1,0 +1,72 @@
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+.nav-list > li > a,
+.nav-list > li > a:hover,
+.nav-list > li > a:focus {
+    color: #6a6a6a;
+    /*
+    color: #5a5a5a;
+    cursor: default;
+    background-color: #FAFAFA;
+    border: 1px solid #e5e5e5;
+    border-bottom-color: transparent;
+    */
+}
+
+.nav-list > li.active > a,
+.nav-list > li.active > a:hover,
+.nav-list > li.active > a:focus {
+    background-color: #afafaf;
+    color: #ffffff;
+    /*
+    color: #555555;
+    cursor: default;
+    background-color: #28a633;
+    border: 1px solid #dddddd;
+    border-bottom-color: transparent;
+    */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 60px;
+}
+#footer {
+    background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+    width: auto;
+    max-width: 880px;
+}
+.container .credit {
+    margin: 20px 0;
+}
