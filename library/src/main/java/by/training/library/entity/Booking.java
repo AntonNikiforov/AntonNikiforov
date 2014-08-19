@@ -9,7 +9,6 @@ public class Booking {
     private Book book;
     private Date dateOfIssue;
     private Date dateOfReturn;
-    private boolean returned;
     private BookingType type;
 
     public int getId() {
@@ -52,14 +51,6 @@ public class Booking {
         this.dateOfReturn = dateOfReturn;
     }
 
-    public boolean isReturned() {
-        return returned;
-    }
-
-    public void setReturned(boolean returned) {
-        this.returned = returned;
-    }
-
     public BookingType getType() {
         return type;
     }
@@ -76,7 +67,6 @@ public class Booking {
         Booking booking = (Booking) o;
 
         if (id != booking.id) return false;
-        if (returned != booking.returned) return false;
         if (!book.equals(booking.book)) return false;
         if (!dateOfIssue.equals(booking.dateOfIssue)) return false;
         if (!dateOfReturn.equals(booking.dateOfReturn)) return false;
@@ -93,7 +83,6 @@ public class Booking {
         result = 31 * result + book.hashCode();
         result = 31 * result + dateOfIssue.hashCode();
         result = 31 * result + dateOfReturn.hashCode();
-        result = 31 * result + (returned ? 1 : 0);
         result = 31 * result + type.hashCode();
         return result;
     }
@@ -106,7 +95,6 @@ public class Booking {
         sb.append(", book=").append(book);
         sb.append(", dateOfIssue=").append(dateOfIssue);
         sb.append(", dateOfReturn=").append(dateOfReturn);
-        sb.append(", returned=").append(returned);
         sb.append(", type=").append(type);
         sb.append('}');
         return sb.toString();

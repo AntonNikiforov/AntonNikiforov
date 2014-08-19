@@ -1,11 +1,10 @@
 package by.training.library.util;
 
-import java.text.SimpleDateFormat;
-
 public class DateHelper {
 
     public static void main(String[] args) {
-        System.out.println(getCurrentDate());
+        String str = null;
+        System.out.println(Integer.valueOf(str));
     }
 
     public static java.sql.Date getCurrentDate() {

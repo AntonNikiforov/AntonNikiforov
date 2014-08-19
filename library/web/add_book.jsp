@@ -23,8 +23,9 @@
 
     <%@include file="header.jsp"%>
 
+    <%@include file="message.jsp"%>
+
     <div class="container jumbotron well-lg" style="max-width: 500px;">
-        <p>${requestScope.msg}</p>
         <form action="add_book" method="post"
               class="form-horizontal" role="form" lang="en">
 

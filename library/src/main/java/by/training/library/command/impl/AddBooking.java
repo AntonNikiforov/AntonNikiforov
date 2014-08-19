@@ -4,18 +4,15 @@ import by.training.library.command.Command;
 import by.training.library.command.CommandException;
 import by.training.library.controller.Page;
 import by.training.library.controller.SessionScope;
-import by.training.library.dao.BookingDao;
-import by.training.library.dao.CustomDao;
-import by.training.library.dao.DaoException;
-import by.training.library.entity.Book;
 import by.training.library.entity.Booking;
-import by.training.library.entity.User;
-import by.training.library.util.DateHelper;
-import by.training.library.util.Security;
+import by.training.library.service.BookingService;
+import by.training.library.service.exception.NoMoreBooksException;
+import by.training.library.service.exception.NoSuchBookException;
+import by.training.library.service.exception.NoSuchUserException;
+import by.training.library.service.exception.ServiceException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.*;
 
 public class AddBooking implements Command {
 
@@ -29,6 +26,7 @@ public class AddBooking implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
+
         Boolean admin = SessionScope.isAdmin(request);
         if (admin == null || !admin) {
             return Page.START_PAGE;
@@ -38,57 +36,45 @@ public class AddBooking implements Command {
         String bookParameter = request.getParameter(BOOK_ID);
         String typeParameter = request.getParameter(TYPE_ID);
 
-        Spring page;
-
         if (userParameter != null && bookParameter != null && typeParameter != null) {
-            Integer userId = Integer.parseInt(userParameter);
-            Integer bookId = Integer.parseInt(bookParameter);
-            Integer typeID = Integer.parseInt(typeParameter);
 
             try {
-                Booking booking = new Booking();
+                Integer userId = Integer.parseInt(userParameter);
+                Integer bookId = Integer.parseInt(bookParameter);
+                Integer typeID = Integer.parseInt(typeParameter);
 
-                CustomDao cDao = new CustomDao();
-                BookingDao dao = new BookingDao();
+                BookingService service = BookingService.getInstance();
 
-                User user = cDao.readUserById(userId);
-                Book book = cDao.readBookById(bookId);
+                Booking booking = service.createBooking(userId, bookId, typeID);
 
-                if (user == null || book == null) {
-                    if (user == null) request.setAttribute(MESSAGE, "no such user");
-                    else request.setAttribute(MESSAGE, "no such book");
+                request.setAttribute(BOOKING, booking);
+                return Page.BOOKING_PAGE;
 
-                } else {
-                    booking.setUser(user);
-                    booking.setBook(book);
-                    booking.setDateOfIssue(DateHelper.getCurrentDate());
-                    //booking.setDateOfReturn(null);
-                    //booking.setReturned(false);
-                    booking.setType(dao.getBookingTypeById(typeID));
-
-                    int id = dao.createBooking(booking).getId();
-
-                    //return "/booking?id=" + id;
-                    booking.getUser().setEmail(Security.hideEmail(booking.getUser().getEmail()));
-                    booking.getUser().setPassword(Security.hidePassword());
-                    request.setAttribute(BOOKING, booking);
-                    return Page.BOOKING_PAGE;
-                }
-
-            } catch (DaoException e) {
-                throw new CommandException(getClass() + ": " + e.getMessage(), e);
+            } catch (NoSuchUserException e) {
+                request.setAttribute(MESSAGE, e.getMessage());
+            } catch (NoSuchBookException e) {
+                request.setAttribute(MESSAGE, e.getMessage());
+            } catch (NoMoreBooksException e) {
+                request.setAttribute(MESSAGE, e.getMessage());
+            } catch (ServiceException e) {
+                throw new CommandException(e);
+            } catch (IllegalArgumentException e) {
+                request.setAttribute(MESSAGE, "wrong request");
             }
         }
-        request.setAttribute(USER_ID, userParameter);
-        request.setAttribute(BOOK_ID, bookParameter);
-        try {
-            BookingDao dao = new BookingDao();
-            request.setAttribute(TYPE_LIST, dao.getAllBookingTypes());
 
-            //return "/add_booking.jsp";
+        try {
+            BookingService service = BookingService.getInstance();
+            request.setAttribute(TYPE_LIST, service.getAllTypes());
+
+            request.setAttribute(USER_ID, userParameter);
+            request.setAttribute(BOOK_ID, bookParameter);
+
             return Page.ADD_BOOKING_PAGE;
-        } catch (DaoException e) {
-            throw new CommandException("AddBooking: " + e.getMessage(), e);
+        } catch (ServiceException e) {
+            throw new CommandException(e);
+        } catch (NumberFormatException e) {
+            throw new CommandException(e);
         }
     }
 }

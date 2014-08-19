@@ -98,7 +98,9 @@ public class SearchResult extends TagSupport {
         for (Booking booking : list) {
             sb.append("<a href=\"booking?id=").append(booking.getId()).append("\" class=\"list-group-item\">")
                     .append("<h4 class=\"list-group-item-heading\">")
-                    .append(booking.getUser().getName()).append(" <small>").append(booking.getUser().getId()).append("</small>")
+                    .append(booking.getUser().getName()).append(" ")
+                    .append(booking.getUser().getSurname())
+                    .append(" <small>").append(booking.getUser().getId()).append("</small>")
                     .append("</h4>")
                     .append("<h4 class=\"list-group-item-heading\">")
                     .append(booking.getBook().getName()).append(" <small>").append(booking.getBook().getId()).append("</small>")

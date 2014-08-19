@@ -24,7 +24,7 @@
     <%@include file="header.jsp"%>
 
     <div class="container jumbotron well-lg" style="max-width: 500px;">
-        <p>${requestScope.msg}</p>
+
         <form action="sign_up" method="post"
               class="form-horizontal" role="form" lang="en">
 

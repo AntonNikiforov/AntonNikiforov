@@ -8,7 +8,7 @@ public class CommandException extends ProjectException {
         super(message);
     }
 
-    public CommandException(String message, Exception e) {
-        super(message, e);
+    public CommandException(Exception e) {
+        super(e);
     }
 }

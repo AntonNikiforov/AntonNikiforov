@@ -4,10 +4,10 @@ import by.training.library.command.Command;
 import by.training.library.command.CommandException;
 import by.training.library.controller.Page;
 import by.training.library.controller.SessionScope;
-import by.training.library.dao.BookingDao;
-import by.training.library.dao.CustomDao;
-import by.training.library.dao.DaoException;
-import by.training.library.entity.Booking;
+import by.training.library.service.BookService;
+import by.training.library.service.BookingService;
+import by.training.library.service.exception.ServiceException;
+import by.training.library.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -44,25 +44,25 @@ public class Search implements Command {
         int num = 0;
 
         try {
-            CustomDao dao = new CustomDao();
+            //CustomDao dao = new CustomDao();
 
             if (type.equals("book")) {
-                resultList = dao.searchBookByName(query, numOfPart, numOfBooks);
-                num = dao.getNumOfBooks(query);
+                BookService service = BookService.getInstance();
+                resultList = service.searchByName(query, numOfPart, numOfBooks);
+                num = service.searchByName(query).size();
             }
 
             if (type.equals("user")) {
-                resultList = dao.getPartOfUsers(numOfPart, numOfBooks);
-                num = dao.getNumOfUsers();
+                UserService service = UserService.getInstance();
+                resultList = service.getAllUsers(numOfPart, numOfBooks);
+                num = service.getNumOfUsers();
             }
 
             if (type.equals("booking")) {
-                BookingDao bDao = new BookingDao();
-                resultList = bDao.getPartOfBookings(numOfPart, numOfBooks);
-                num = bDao.getNumOfBookings();
+                BookingService service = BookingService.getInstance();
+                resultList = service.getAllBookings(numOfPart, numOfBooks);
+                num = service.getNumOfBooking();
 
-                System.out.println(num);
-                System.out.println(resultList.isEmpty());
                 //for (Booking booking : resultList) System.out.println(booking);
             }
 
@@ -73,10 +73,8 @@ public class Search implements Command {
             request.setAttribute(TYPE, type);
             request.setAttribute(QUERY, query);
 
-            System.out.println("/search.jsp?q=" + query + "$type=" + type + "&page=" + numOfPart);
-
-        } catch (DaoException e) {
-            throw new CommandException(e.getMessage(), e);
+        } catch (ServiceException e) {
+            throw new CommandException(e);
         }
 
         return Page.SEARCH_PAGE;

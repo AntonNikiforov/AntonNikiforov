@@ -20,7 +20,7 @@ public class SwitchLanguage implements Command {
         //String page = request.getParameter(PAGE);
         String page = (String) request.getSession().getAttribute(SessionScope.PAGE);
         if (page == null) {
-            page = "/settings";
+            page = Command.EDIT_USER;
         }
         if (locale == null) {
             return Page.PREFIX + page;

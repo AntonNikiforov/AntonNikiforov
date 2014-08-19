@@ -43,7 +43,7 @@ public class ConnectionPool {
             connection = free.take();
             busy.add(connection);
         } catch (InterruptedException e) {
-            throw new ConnectionPoolException(e.toString(), e);
+            throw new ConnectionPoolException(e);
         }
 
         return connection;
@@ -56,7 +56,7 @@ public class ConnectionPool {
             try {
                 free.put(con);
             } catch (InterruptedException e) {
-                throw new ConnectionPoolException(e.toString(), e);
+                throw new ConnectionPoolException(e);
             }
         }
     }
@@ -81,11 +81,11 @@ public class ConnectionPool {
                 }
                 open = true;
             } catch (ClassNotFoundException e) {
-                throw new ConnectionPoolException(e.toString(), e);
+                throw new ConnectionPoolException(e);
             } catch (SQLException e) {
-                throw new ConnectionPoolException(e.toString(), e);
+                throw new ConnectionPoolException(e);
             } catch (InterruptedException e) {
-                throw new ConnectionPoolException(e.toString(), e);
+                throw new ConnectionPoolException(e);
             }
         }
     }
@@ -102,7 +102,7 @@ public class ConnectionPool {
                 }
                 busy = null;
             } catch (SQLException e) {
-                throw new ConnectionPoolException(e.toString(), e);
+                throw new ConnectionPoolException(e);
             }
             try {
                 for (Connection con : free) {
@@ -111,7 +111,7 @@ public class ConnectionPool {
                 free = null;
 
             } catch (SQLException e) {
-                throw new ConnectionPoolException(e.toString(), e);
+                throw new ConnectionPoolException(e);
             }
 
 
@@ -129,7 +129,7 @@ public class ConnectionPool {
                     open = false;
                 }
             } catch (SQLException e) {
-                throw new ConnectionPoolException(e.toString(), e);
+                throw new ConnectionPoolException(e);
             }
         }
     }

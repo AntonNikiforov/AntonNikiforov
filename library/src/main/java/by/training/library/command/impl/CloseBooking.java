@@ -2,11 +2,9 @@ package by.training.library.command.impl;
 
 import by.training.library.command.Command;
 import by.training.library.command.CommandException;
-import by.training.library.controller.Page;
 import by.training.library.controller.SessionScope;
-import by.training.library.dao.BookingDao;
-import by.training.library.dao.DaoException;
-import by.training.library.util.DateHelper;
+import by.training.library.service.BookingService;
+import by.training.library.service.exception.ServiceException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CloseBooking implements Command {
 
     public static final String BOOKING_ID = "id";
+    public static final String MESSAGE = "msg";
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
@@ -24,19 +23,18 @@ public class CloseBooking implements Command {
             return Command.BOOKINGS;
         }
 
-        if (request.getParameter(BOOKING_ID) == null) {
-            throw new CommandException("missing booking id");
-        }
-        Integer bookingId = Integer.parseInt(request.getParameter(BOOKING_ID));
-
         try {
-            BookingDao dao = new BookingDao();
-            dao.changeDateOfReturn(bookingId, DateHelper.getCurrentDate());
-            dao.changeReturn(bookingId, true);
+            Integer bookingId = Integer.valueOf(request.getParameter(BOOKING_ID));
 
-            return "/booking?id=" + bookingId;
-        } catch (DaoException e) {
-            throw new CommandException("CloseBooking: " + e.getMessage());
+            BookingService service = BookingService.getInstance();
+            service.close(bookingId);
+
+            return Command.BOOKING;//"/booking?id=" + bookingId;
+        } catch (IllegalArgumentException e) {
+            request.setAttribute(MESSAGE, "wrong request");
+            return Command.BOOKINGS;
+        } catch (ServiceException e) {
+            throw new CommandException(e);
         }
     }
 }

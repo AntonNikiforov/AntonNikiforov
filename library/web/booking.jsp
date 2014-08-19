@@ -8,7 +8,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Book</title>
+    <title>Booking</title>
 
     <!--CSS-->
     <link href="view/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,8 @@
 <div id="wrap">
 
     <%@include file="header.jsp"%>
+
+    <%@include file="message.jsp"%>
 
     <div class="container well-sm" style="max-width: 500px">
         <c:if test="${sessionScope.admin}">
@@ -63,10 +65,26 @@
             <dl class="dl-horizontal text-capitalize">
                 <dt>#</dt>
                 <dd>${requestScope.booking.id}</dd>
-                <dt><fmt:message key="user" bundle="${locale}"/></dt>
-                <dd>${requestScope.booking.user}</dd>
-                <dt><fmt:message key="book" bundle="${locale}"/></dt>
-                <dd>${requestScope.booking.book}</dd>
+                <dt></dt>
+                <dd><fmt:message key="user" bundle="${locale}"/></dd>
+                <dt>
+                    <p># ${requestScope.booking.user.id}</p>
+                </dt>
+                <dd>
+                    <p>
+                        <a href="user?id=${requestScope.booking.user.id}">${requestScope.booking.user.name} ${requestScope.booking.user.surname}</a>
+                    </p>
+                </dd>
+                <dt></dt>
+                <dd><fmt:message key="book" bundle="${locale}"/></dd>
+                <dt>
+                    <p># ${requestScope.booking.book.id}</p>
+                </dt>
+                <dd>
+                    <p>
+                        <a href="book?id=${requestScope.booking.book.id}">${requestScope.booking.book.name}</a>
+                    </p>
+                </dd>
                 <dt><fmt:message key="date_of_issue" bundle="${locale}"/></dt>
                 <dd>${requestScope.booking.dateOfIssue}</dd>
                 <dt><fmt:message key="date_of_return" bundle="${locale}"/></dt>

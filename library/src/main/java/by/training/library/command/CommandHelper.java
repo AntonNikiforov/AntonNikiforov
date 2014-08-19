@@ -32,6 +32,8 @@ public class CommandHelper {
         commands.put(Command.BOOKING,           new ShowBooking());
         commands.put(Command.ADD_BOOKING,       new AddBooking());
         commands.put(Command.CLOSE_BOOKING,     new CloseBooking());
+        commands.put(Command.DELETE_BOOKING,    new DeleteBooking());
+        commands.put(Command.EDIT_BOOKING,      new EditBooking());
     }
 
     public static CommandHelper getInstance() {
@@ -47,11 +49,9 @@ public class CommandHelper {
         Command command = commands.get(commandName);
 
         if (null == command) {
-            command = NoSuchCommand.getInstance();
+            command = new NoSuchCommand();
         }
 
-        System.out.println(commandName);
-        System.out.println(command.getClass().getSimpleName());
         return command;
     }
 }

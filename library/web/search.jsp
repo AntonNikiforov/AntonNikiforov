@@ -27,6 +27,8 @@
 
     <%@include file="header.jsp"%>
 
+    <%@include file="message.jsp"%>
+
     <div class="container jumbotron well-lg" style="max-width: 500px">
 
         <c:if test="${sessionScope.admin}">

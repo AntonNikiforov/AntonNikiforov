@@ -23,12 +23,9 @@
 
     <%@include file="header.jsp"%>
 
+    <%@include file="message.jsp"%>
+
     <div class="container jumbotron well-lg" style="max-width: 500px;">
-
-        <c:if test="${not empty requestScope.msg}">
-            <div class="alert alert-danger" role="alert">${requestScope.msg}</div>
-        </c:if>
-
 
         <form action="sign_in" method="post"
               class="form-horizontal" role="form" lang="en">

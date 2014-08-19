@@ -23,8 +23,10 @@
 
     <%@include file="header.jsp"%>
 
+    <%@include file="message.jsp"%>
+
     <div class="container jumbotron well-lg" style="max-width: 500px;">
-        <p>${requestScope.msg}</p>
+
         <form action="edit_book" method="post"
               class="form-horizontal" role="form" lang="en">
 
@@ -58,21 +60,12 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputNumInLibAll" class="col-sm-2 control-label">
+                <label for="inputNum" class="col-sm-2 control-label">
                     Number in library all
                 </label>
                 <div class="col-sm-10">
-                    <input name="num_in_lib_all" value=""
-                           type="number" class="form-control" id="inputNumInLibAll" placeholder="${requestScope.book.numInLibAll}">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputNumInLibNow" class="col-sm-2 control-label">
-                    Number in library now
-                </label>
-                <div class="col-sm-10">
-                    <input name="num_in_lib_now" value=""
-                           type="number" class="form-control" id="inputNumInLibNow" placeholder="${requestScope.book.numInLibNow}">
+                    <input name="num" value=""
+                           type="number" class="form-control" id="inputNum" placeholder="${requestScope.num}/${requestScope.book.num}">
                 </div>
             </div>
             <div class="form-group">

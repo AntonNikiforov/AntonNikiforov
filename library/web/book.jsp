@@ -25,12 +25,13 @@
 
     <%@include file="header.jsp"%>
 
+    <%@include file="message.jsp"%>
+
     <div class="container well-sm" style="max-width: 500px">
         <c:if test="${sessionScope.admin}">
             <div class="form-group">
                 <div class="pull-left">
                     <a class="btn btn-default" href="add_booking?book_id=${requestScope.book.id}" role="button">Новый заказ</a>
-                    <a class="btn btn-default" href="#" role="button">История заказов</a>
                 </div>
                 <div class="btn-group pull-right">
                     <a class="btn btn-warning" href="edit_book?id=${requestScope.book.id}" role="button">
@@ -60,7 +61,7 @@
                 <dt><fmt:message key="genre" bundle="${locale}"/></dt>
                 <dd>${requestScope.book.genre.name}</dd>
                 <dt><fmt:message key="num" bundle="${locale}"/></dt>
-                <dd>${requestScope.book.numInLibNow}/${requestScope.book.numInLibAll}</dd>
+                <dd>${requestScope.num}/${requestScope.book.num}</dd>
             </dl>
         </div>
 

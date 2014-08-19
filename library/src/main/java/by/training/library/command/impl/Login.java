@@ -4,10 +4,9 @@ import by.training.library.command.Command;
 import by.training.library.command.CommandException;
 import by.training.library.controller.Page;
 import by.training.library.controller.SessionScope;
-import by.training.library.dao.CustomDao;
-import by.training.library.dao.DaoException;
 import by.training.library.entity.User;
-import by.training.library.util.Security;
+import by.training.library.service.exception.ServiceException;
+import by.training.library.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +22,9 @@ public class Login implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
 
-        if (SessionScope.getUserId(request) != null) return Page.START_PAGE;
+        if (SessionScope.getUserId(request) != null) {
+            return Page.START_PAGE;
+        }
 
         String email = request.getParameter(EMAIL);
         String password = request.getParameter(PASSWORD);
@@ -39,9 +40,11 @@ public class Login implements Command {
 
         try {
             //UserDao dao = new MySqlDaoFactory().getDao(UserDao.class);
-            CustomDao dao = new CustomDao();
+            //CustomDao dao = new CustomDao();
+            //UserDao dao = DaoFactory.getInstance().getUserDao();
 
-            User user = dao.login(email, Security.getHashCode(password));
+            UserService service = UserService.getInstance();
+            User user = service.login(email, password);//dao.login(email, Security.getHashCode(password));
 
             if (user == null) {
                 ResourceBundle bundle = ResourceBundle.getBundle("message");
@@ -56,8 +59,8 @@ public class Login implements Command {
 
                 return Command.USER;
             }
-        } catch (DaoException e) {
-            throw new CommandException(e.toString(), e);
+        } catch (ServiceException e) {
+            throw new CommandException(e);
         }
     }
 }

@@ -4,8 +4,7 @@ public class ProjectException extends Exception {
 
     private Exception hiddenException;
 
-    public ProjectException(String msg, Exception e) {
-        super(msg);
+    public ProjectException(Exception e) {
         hiddenException = e;
     }
 

@@ -3,6 +3,8 @@ package by.training.library.controller;
 import by.training.library.command.Command;
 import by.training.library.command.CommandException;
 import by.training.library.command.CommandHelper;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class Controller extends HttpServlet {
+
+    private final static Logger log = Logger.getLogger(Controller.class);
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,19 +32,21 @@ public class Controller extends HttpServlet {
         
         String commandName = null;
         try {
-            //Command command = CommandFactory.getInstance().getCommand(request);
             commandName = CommandHelper.getInstance().getCommandName(request);
             Command command = CommandHelper.getInstance().getCommand(commandName);
-
             pageName = command.execute(request, response);
+
+            log.log(Level.INFO, "command name: " + commandName);
+            log.log(Level.INFO, "command: " + command.getClass().getSimpleName());
+            log.log(Level.INFO, "page: " + pageName);
 
         } catch (CommandException e) {
             pageName = Page.ERROR_PAGE;
-            request.setAttribute("error_msg", e.toString());
+            request.setAttribute("error_msg", e.getHiddenException().getMessage());
+            e.printStackTrace();
         }
 
         request.getSession().setAttribute(SessionScope.PAGE, commandName);
-        System.out.println(pageName);
         dispatch(request, response, pageName);
 
     }

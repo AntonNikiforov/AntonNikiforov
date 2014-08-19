@@ -4,12 +4,10 @@ import by.training.library.command.Command;
 import by.training.library.command.CommandException;
 import by.training.library.controller.Page;
 import by.training.library.controller.SessionScope;
-import by.training.library.dao.CustomDao;
-import by.training.library.dao.DaoException;
-import by.training.library.entity.Lang;
-import by.training.library.entity.Role;
 import by.training.library.entity.User;
-import by.training.library.util.Security;
+import by.training.library.service.exception.ServiceException;
+import by.training.library.service.exception.UserAlreadyExistsException;
+import by.training.library.service.UserService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,6 +20,7 @@ public class AddUser implements Command {
     public static final String SURNAME = "surname";
 
     public static final String MESSAGE = "msg";
+    public static final String USER = "user";
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
@@ -37,48 +36,30 @@ public class AddUser implements Command {
         String name = request.getParameter(NAME);
         String surname = request.getParameter(SURNAME);
 
-        if (email == null || password == null ||
-                name == null || surname == null) {
-
-            return Page.SIGN_UP_PAGE;
-
-        } else if (email.equals("") || password.equals("") ||
-                name.equals("") || surname.equals("")) {
-
-            request.setAttribute(MESSAGE, "empty fields");
-            return Page.SIGN_UP_PAGE;
-
-        } else {
+        if (email != null && password != null && name != null && surname != null) {
+            if ("".equals(email) || "".equals(password) || "".equals(name) || "".equals(surname)) {
+                request.setAttribute(MESSAGE, "empty fields");
+            }
 
             try {
-                CustomDao dao = new CustomDao();
-                Role role = dao.getRoleByName(Role.CLIENT);
-
-                String locale = (String) request.getSession().getAttribute(SessionScope.LOCALE);
-                if (locale == null) locale = Lang.RU;
-                Lang lang = dao.getLangByName(locale);
-
-                User user = new User();
-                user.setEmail(email);
-                user.setPassword(Security.getHashCode(password));
-                user.setName(name);
-                user.setSurname(surname);
-                user.setRole(role);
-                user.setLang(lang);
-
-                int id = dao.createUser(user).getId();
+                UserService service = UserService.getInstance();
+                User user = service.createUser(email, password, name, surname);
 
                 if (admin == null) {
                     request.getSession().setAttribute(SessionScope.USER_ID, user.getId());
+                    request.getSession().setAttribute(SessionScope.LOCALE, user.getLang().getName());
                     request.getSession().setAttribute(SessionScope.ADMIN, user.isAdmin());
                 }
 
-                //return Command.USER + "?id=" + id;
-                request.setAttribute("user", user);
+                request.setAttribute(USER, user);
                 return Page.USER_PAGE;
-            } catch (DaoException e) {
-                throw new CommandException(e.getMessage(), e);
+
+            } catch (UserAlreadyExistsException e) {
+                request.setAttribute(MESSAGE, e.getMessage());
+            } catch (ServiceException e) {
+                throw new CommandException(e);
             }
         }
+        return Page.SIGN_UP_PAGE;
     }
 }

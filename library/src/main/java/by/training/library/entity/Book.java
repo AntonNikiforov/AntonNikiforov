@@ -6,8 +6,7 @@ public class Book {
     private String name;
     private String author;
     private int year;
-    private int numInLibAll;
-    private int numInLibNow;
+    private int num;
     private Genre genre;
 
     public int getId() {
@@ -42,20 +41,12 @@ public class Book {
         this.year = year;
     }
 
-    public int getNumInLibAll() {
-        return numInLibAll;
+    public int getNum() {
+        return num;
     }
 
-    public void setNumInLibAll(int numInLibAll) {
-        this.numInLibAll = numInLibAll;
-    }
-
-    public int getNumInLibNow() {
-        return numInLibNow;
-    }
-
-    public void setNumInLibNow(int numInLibNow) {
-        this.numInLibNow = numInLibNow;
+    public void setNum(int num) {
+        this.num = num;
     }
 
     public Genre getGenre() {
@@ -74,8 +65,7 @@ public class Book {
         Book book = (Book) o;
 
         if (id != book.id) return false;
-        if (numInLibAll != book.numInLibAll) return false;
-        if (numInLibNow != book.numInLibNow) return false;
+        if (num != book.num) return false;
         if (year != book.year) return false;
         if (!author.equals(book.author)) return false;
         if (!genre.equals(book.genre)) return false;
@@ -90,8 +80,7 @@ public class Book {
         result = 31 * result + name.hashCode();
         result = 31 * result + author.hashCode();
         result = 31 * result + year;
-        result = 31 * result + numInLibAll;
-        result = 31 * result + numInLibNow;
+        result = 31 * result + num;
         result = 31 * result + genre.hashCode();
         return result;
     }
@@ -103,8 +92,7 @@ public class Book {
         sb.append(", name='").append(name).append('\'');
         sb.append(", author='").append(author).append('\'');
         sb.append(", year=").append(year);
-        sb.append(", numInLibAll=").append(numInLibAll);
-        sb.append(", numInLibNow=").append(numInLibNow);
+        sb.append(", num=").append(num);
         sb.append(", genre=").append(genre);
         sb.append('}');
         return sb.toString();

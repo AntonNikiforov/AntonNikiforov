@@ -25,14 +25,15 @@
 
     <%@include file="header.jsp"%>
 
-    <c:choose>
-        <c:when test="${not empty requestScope.user}">
+    <%@include file="message.jsp"%>
+
             <div class="container well-sm" style="max-width: 500px">
                 <c:if test="${sessionScope.admin}">
                     <div class="form-group">
                         <div class="pull-left">
-                            <a class="btn btn-default" href="add_booking?user_id=${requestScope.user.id}" role="button">Новый заказ</a>
-                            <a class="btn btn-default" href="bookings" role="button">История заказов</a>
+                            <a class="btn btn-default" href="add_booking?user_id=${requestScope.user.id}" role="button">
+                                Новый заказ
+                            </a>
                         </div>
                         <div class="btn-group pull-right">
                             <a class="btn btn-warning" href="edit_user?id=${requestScope.user.id}" role="button">
@@ -52,7 +53,9 @@
 
                     <div class="container">
                         <div class="btn-group pull-left">
+                            <!--
                             <a class="btn btn-default" href="#" role="button">History</a>
+                            -->
                         </div>
                         <div class="btn-group pull-right">
                             <a class="btn btn-warning" href="edit_user?id=${requestScope.user.id}" role="button">
@@ -85,13 +88,6 @@
                 </div>
 
             </div>
-        </c:when>
-        <c:otherwise>
-        <div class="container jumbotron well-sm text-center" style="max-width: 500px">
-            <h3>NO SUCH USER</h3>
-        </div>
-        </c:otherwise>
-    </c:choose>
 
 
     <div id="push"></div>
