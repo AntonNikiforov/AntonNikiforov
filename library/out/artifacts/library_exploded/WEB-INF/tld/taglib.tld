@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>library</short-name>
+
+    <tag>
+        <name>booksTag</name>
+        <tag-class>by.training.library.tag.Books</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>books</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.List</type>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>pagination</name>
+        <tag-class>by.training.library.tag.Pagination</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>numAtAll</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Integer</type>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>searchResult</name>
+        <tag-class>by.training.library.tag.SearchResult</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.List</type>
+        </attribute>
+    </tag>
+</taglib>
